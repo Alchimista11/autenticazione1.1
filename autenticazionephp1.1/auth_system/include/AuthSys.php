@@ -98,7 +98,7 @@ class AuthSys
 
       //INVIO MAIL CON IL LINK DI ATTIVAZIONE
       $queryString = ['id' => $id, 'token' => $token];
-      $linkAttivazione = "http://localhost:8888/autenticazionephp1.1/auth_system/attivazione.php" .
+      $linkAttivazione = "http://localhost:8888/autenticazionephp1.1/auth_system/attivazione.php?" .
         http_build_query($queryString);
       $this->inviaEmailAttivazione($post['email'], $linkAttivazione);
     } catch (PDOException $e) {
